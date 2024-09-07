@@ -88,14 +88,14 @@ You need to replace the initial `_config.yml` file with the [prepared one](https
 Now fill in the **site variable** such as blog name, profile image, and social accounts in `_config.yml`.
 
 ```yml
-title: Example.com
+title: BBZJUN's
 description: "Satellite - jekyll blog theme"
 logo_img: "/assets/img/favicon.webp"
 profile_img: "/assets/img/profile.jpg"
 
 # Social Links
-email: example@gmail.com
-github_username: github
+email: wowns0912@naver.com
+github_username: BBZJUN
 twitter_username: twitter
 instagram_username: instagram
 linkedin_username: linkedin
