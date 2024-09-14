@@ -303,11 +303,24 @@ function fetchMenu(callbackFunction){
 }
 
 let menu;
-menu = fetchMenu(function (result) {
+menu = fetchMenu(function (result) {// 익명함수
     // 호출되면 실행될 코드를 넣어주세여
-    console.log("실행", result);
+    console.log("5초 뒤 실행", result);
 });
 //#1
 console.log("출력 결과", menu);
 //아직 값이 안나와서 여긴 언디파인드뜸
+```
+
+
+### Promise - 프로미스
+
+프로미스는 자바스크립트 비동기 처리에 사용되는 객체입니다. 여기서 자바스크립트의 비동기 처리란 ‘특정 코드의 실행이 완료될 때까지 기다리지 않고 다음 코드를 먼저 수행하는 자바스크립트의 특성’을 의미합니다. 
+
+https://joshua1988.github.io/web-development/javascript/promise-for-beginners/
+
+```javascript
+
+.then(); //성공
+.catch(); //실패
 ```
