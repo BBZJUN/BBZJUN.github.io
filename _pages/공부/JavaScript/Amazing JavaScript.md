@@ -9,6 +9,11 @@ thumbnail: "/assets/img/thumbnail/js.jpeg"
 
 **인프런-Amazing JavaScript**
 
+강의영상 : https://www.inflearn.com/course/amazing-javascript-%EC%9E%85%EB%AC%B8
+
+강의자료 : https://joshua1988.github.io/vue-camp/
+
+온라인 IDE(코드샌드박스) : https://codesandbox.io/
 
 ### 개념
 
@@ -172,3 +177,137 @@ arr.forEach(fuction(item) {
 
 ### 템플릿 리터럴
 
+```javascript
+
+` -> 이름은 백틱
+이 백틱(`)을 사용해서
+`${변수명}` 이렇게 쓸 수 있다
+
+```
+
+### 디스트럭쳐링(구조 분해 문법)
+
+```javascript
+
+var arr = ['apple',10]
+
+var [fruit, num] = arr;
+// 로 하면 fruit에 'apple', num에 10이 들어간다
+
+//////
+var josh = {
+  language: 'javascript',
+  position: 'front-end',
+  area: 'pangyo',
+  hobby: 'singing',
+  age: '102'
+};
+
+var { language:별칭, position, area, hobby, age } = josh;
+// :별칭 이름을 써서 이름을 바꿀 수 있다
+console.log(language); // javascript
+console.log(position); // front-end
+console.log(area); // pangyo
+console.log(hobby); // singing
+console.log(age); // 102
+ 
+
+```
+
+
+### 스프레드 오퍼레이터 
+
+... 으로 분리해서 넣는다
+
+```javascript
+// obj 객체를 newObj 객체에 복제
+var obj = {
+  a: 10,
+  b: 20
+};
+var newObj = {...obj};
+console.log(newOjb); // {a: 10, b: 20}
+
+// arr 배열을 newArr 배열에 복제
+var arr = [1,2,3];
+var newArr = [...arr];
+//var newArr = [...arr, 30, 50];
+//이렇게 추가도 할 수 있다.
+console.log(newArr); // [1, 2, 3]
+ 
+
+```
+
+
+### 모듈화
+
+#### Import & Export
+
+```javascript
+// math.js
+export var pi = 3.14;
+export function sum(a, b) {
+  return a + b;
+}
+ 
+ 
+// app.js
+import { pi } from './math.js';
+import { sum } from './math.js';
+// import { pi, sum } from './math.js';
+//한번에 불러와도 된다
+console.log(pi); // 3.14
+```
+
+#### default
+파일에서 하나를 꺼내겠다.
+{} 이 괄호가 없다.
+
+```javascript
+// math.js
+export default var pi = 3.14;
+ 
+ 
+// app.js
+import pi from './math.js';
+
+console.log(pi); // 3.14
+
+```
+
+
+### 라이브러리
+
+개발자가 편하게 구현할 수 있도록 미리 만들어 놓은 기능
+
+```javascript
+
+import 라이브러리이름 from "라이브러리이름"
+Lodash 라는 라이브러리 추천함
+
+```
+
+
+### 비동기처리
+자바스크립트의 비동기 처리란 특정 코드의 연산이 끝날 때까지 코드의 실행을 멈추지 않고 다음 코드를 먼저 실행하는 자바스크립트의 특성을 의미합니다.
+
+```javascript
+
+function fetchMenu(callbackFunction){
+    setTimeout(() =>{
+        //# 2
+        let data = {firstMenu: "구독"};
+        callbackFunction(data);
+        return data;
+    }, 5000);
+}
+
+let menu;
+menu = fetchMenu(function (result) {
+    // 호출되면 실행될 코드를 넣어주세여
+    console.log("실행", result);
+});
+//#1
+console.log("출력 결과", menu);
+//아직 값이 안나와서 여긴 언디파인드뜸
+```
