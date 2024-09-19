@@ -1,5 +1,5 @@
 ---
-title: "Amazing JavaScript
+title: "Amazing JavaScript"
 date: "2024-09-14"
 thumbnail: "/assets/img/thumbnail/js.jpeg"
 ---
