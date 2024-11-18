@@ -67,7 +67,18 @@ volumes: $> docker compose rm -vsf
 ```
 
 # mysql 접속하기
+
 ```shell
 mysql -u root -p // 3306포트면
 mysql -u root -p -P 3309 //포트가 다를경우 뒤에 -P 쓰고 포트 걸어주기
+
+use mysql로 mysql로 접속하기
+```
+
+
+# 데이터 넣어주기
+
+```shell
+sql파일을 해당 폴더 안에 넣고
+mysql -u root -p -P 3309(3306이 기본이라 필요없으면 -p까지만 쓴다   ) testdb(해당db이름) < testdb_sample.sql(파일이름)
 ```
